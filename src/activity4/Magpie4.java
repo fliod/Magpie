@@ -133,10 +133,10 @@ public class Magpie4
      .length() - 1);
   }
   
-  int psnOfYou = findKeyword (statement, "I", 0);
-  int psnOfMe = findKeyword (statement, "you", psnOfYou + 3);
+  int psnOfI = findKeyword (statement, "I", 0);
+  int psnOfYou = findKeyword (statement, "you", psnOfI + 1);
   
-  String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe).trim();
+  String restOfStatement = statement.substring(psnOfI + 1, psnOfYou).trim();
   return "Why do you " + restOfStatement + " me?";
  }
  
